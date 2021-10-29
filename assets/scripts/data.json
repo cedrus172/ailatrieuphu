@@ -1,0 +1,18 @@
+[
+    {
+        "ask": "Ba thương con vì con giống mẹ, mẹ thương con vì con giống ai ?",
+        "a": "ông hàng xóm",
+        "b": "thợ sửa ông nước",
+        "c": "ba",
+        "d": "chú thợ điện",
+        "ans": "c"
+    },
+    {
+        "ask": "Chọn câu đúng ?",
+        "a": "Đá cháo ăn bát",
+        "b": "Đá bát chào ăn",
+        "c": "Ăn cháo đá bát",
+        "d": "Ăn bát đá cháo",
+        "ans": "c"
+    }
+]
