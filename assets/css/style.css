@@ -1,11 +1,17 @@
+/* Roboto is Material's default font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
 body
 {
     background-image: url('https://img.wallpapersafari.com/desktop/1440/900/79/79/4p27kj.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 *,body{
-    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', sans-serif;;
 }
 .list-group {
     display: flex;
@@ -15,14 +21,14 @@ body
     border-radius: 0rem;
 }
 .list-group-item {
-    font-size : 25px;
+    font-size : 1.3vw;
     position: relative;
     display: block;
-    padding: 0.5 rem 1 rem;
+    padding: 0.5rem 1rem;
     color: #ff5507;
     text-decoration: none;
     background-color: rgb(0 0 0 / 67%);
-    border: 1 px solid rgba(0,0,0,.125);
+    border: 1px solid rgba(0,0,0,.125);
 }
 
 .list-group-item.active {
@@ -40,4 +46,114 @@ body
 }
 p, .upLevel {
     color : white;
+}
+
+.countDownTime{
+    color : white;
+    font-size : 7em;
+    border: 5px solid rgb(255, 158, 3);
+    background-color: rgb(0 0 0 / 67%);
+    display : inline-block;
+    padding: 12%;
+    border-radius: 50%;
+    margin-top: 22%;
+}
+
+
+.questionContent{
+    margin-top: 5%;
+    padding: 5%;
+    border : 0.2em solid rgb(130, 0, 206);
+    background-color: rgb(9 23 87 / 67%); 
+       border-radius: 2em;
+       width: 60%;
+}
+.optionContent, .questionContent{
+    text-transform: uppercase;   
+    color : white;
+    word-wrap: break-word;
+    text-align: center;    
+}
+
+
+.optionContent{
+    padding: 2%;
+    width: 75%;
+}
+
+
+.option{
+    cursor: pointer;
+    padding : 5%;
+    margin-top: 5%;
+    margin-left : 5%;
+    border : 0.1em groove  white;
+    border-radius : 0.2em;
+    font-size : 2em;
+    color : white;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    transition: 0.5s linear;
+}
+
+.option:hover{
+    color : black;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(2,165,224,1) 0%, rgba(9,9,121,1) 27%, rgba(0,212,255,1) 77%);
+}
+
+.bonusInfo{
+    color : rgb(253, 249, 0);
+    font-size : 2em;
+    border: 2px solid rgb(11, 145, 255);
+    background-color: rgb(0 0 0 / 67%);
+    display : inline-block;
+    padding: 2%;
+    border-radius: 5%;
+}
+
+.swal-modal {
+    width: 478px;
+    opacity: 0;
+    pointer-events: none;
+    background-color: #060b25;
+    text-align: center;
+    border-radius: 5px;
+    position: static;
+    margin: 20px auto;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    z-index: 10001;
+    transition: opacity .2s,-webkit-transform .3s;
+    transition: transform .3s,opacity .2s;
+    transition: transform .3s,opacity .2s,-webkit-transform .3s;
+    border: 1px solid white;
+}
+
+.swal-title {
+    color: white;
+}
+.swal-text {
+    font-size: 20px;
+    position: relative;
+    float: none;
+    line-height: normal;
+    vertical-align: top;
+    text-align: left;
+    display: inline-block;
+    margin: 0;
+    padding: 0 10px;
+    font-weight: 400;
+    color: rgb(255 86 8);
+    max-width: calc(100% - 20px);
+    overflow-wrap: break-word;
+    box-sizing: border-box;
+}
+
+#canvas{
+    background-color: rgb(255, 187, 0);
 }

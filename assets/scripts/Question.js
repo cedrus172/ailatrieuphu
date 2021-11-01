@@ -11,6 +11,10 @@ class Question {
         return this.content[this.correct];
     }
 
+    checkAnswer(option) {
+        return option == this.correct;
+    }
+
     getContent() { return content; }
 }
 

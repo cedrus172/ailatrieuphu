@@ -7,6 +7,9 @@ class Player {
         this.rewardList = rewardList;
         this.listQuestions = [];
         this.maxQuestions = 5;
+        this.isReply = false;
+        this.isLose = false;
+        this.lastBonus = 0;
     }
 
     addQuestion(question) {
@@ -23,9 +26,26 @@ class Player {
         return this.listQuestions;
     }
 
-    addBonus(bonusAdd) {
-        this.bonus += bonusAdd;
-        console.log(bonusAdd);
+    setBonus(bonus) {
+        this.bonus = bonus;
+        console.log(bonus);
+    }
+
+    getCurrentQuestion() {
+        return this.listQuestions[this.currentLevel - 1];
+    }
+
+    selectOption(option) {
+        let result = false;
+        if (this.getCurrentQuestion().checkAnswer(option)) {
+            this.upLevel();
+            result = true;
+        } else {
+            result = false;
+            this.isLose = true;
+        }
+
+        return result;
     }
 
     isHighestBonus() {
@@ -39,11 +59,15 @@ class Player {
 
     upLevel() {
         this.rewardList.setReward(this.currentLevel);
-        let bonusAdd = this.rewardList.getBonus(this.currentLevel);
-        this.addBonus(bonusAdd);
+        let reward = this.rewardList.getReward(this.currentLevel);
+        this.setBonus(reward.bonus);
+        if (reward.upLevel)
+            this.lastBonus = reward.bonus;
         this.currentLevel++;
-        setState();
+        this.setState();
         this.rewardList.renderRewardList();
+        if (this.currentLevel <= 15)
+            loadQuestion(this.getCurrentQuestion());
     }
 
     setState() {
@@ -55,19 +79,19 @@ class Player {
                 break;
             case 6:
                 this.state = 1;
-                this.maxQuestions = 5;
+                this.maxQuestions = 10;
                 break;
             case 11:
                 this.state = 2;
-                this.maxQuestions = 3;
+                this.maxQuestions = 13;
                 break;
             case 13:
                 this.state = 3;
-                this.maxQuestions = 2;
+                this.maxQuestions = 15;
                 break;
             case 15:
                 this.state = 4;
-                this.maxQuestions = 1;
+                this.maxQuestions = 16;
                 break;
             default:
                 break;
@@ -78,10 +102,17 @@ class Player {
     }
 
     resetLevel() {
+        this.isLose = false;
+        this.bonus = 0;
+        this.lastBonus = 0;
         this.currentLevel = 1;
-        setState();
+        this.setState();
         this.rewardList.init();
         this.rewardList.renderRewardList();
+        this.listQuestions = [];
+        this.createListQuestion();
+        loadQuestion(this.getCurrentQuestion());
+        startCountDown();
     }
 
 

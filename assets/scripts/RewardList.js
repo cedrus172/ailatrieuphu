@@ -12,6 +12,11 @@ class RewardList {
         this.listReward.push(obj);
     }
 
+    getReward = (level) => {
+        let reward = this.listReward.find(a => a.number == level);
+        return reward;
+    }
+
     getBonus = (level) => {
         let bonus = this.listReward.find(a => a.number == level).bonus;
         return bonus;
