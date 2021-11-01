@@ -24,25 +24,6 @@
     ></script>
 
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <!-- Fonts and icons -->
-    <script src="/assets/js/plugin/webfont/webfont.min.js"></script>
-    <script>
-      WebFont.load({
-        google: { families: ["Open+Sans:300,400,600,700"] },
-        custom: {
-          families: [
-            "Flaticon",
-            "Font Awesome 5 Solid",
-            "Font Awesome 5 Regular",
-            "Font Awesome 5 Brands",
-          ],
-          urls: ["/assets/css/fonts.css"],
-        },
-        active: function () {
-          sessionStorage.fonts = true;
-        },
-      });
-    </script>
     <script src="/assets/js/plugin/sweetalert/sweetalert.min.js"></script>
 
     <title>Game ai là triệu phú</title>
@@ -50,7 +31,9 @@
 
   <body>
     <div id="root"></div>
-
+    <audio id="audioHome" autoplay>
+      <source src="/assets/sound/ailatrieuphu.mp3" />
+    </audio>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"

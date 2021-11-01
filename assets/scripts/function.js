@@ -49,7 +49,14 @@ const sendAskAlert = (content, title, type, func) => {
             func();
         } else {
             swal.close();
+            if (player.lastIsWin)
+                player.lastBonus = player.bonus;
             loadPage('reward');
         }
     });
+}
+
+async function playAudio() {
+    await timer(2000);
+    audioHome.play()
 }

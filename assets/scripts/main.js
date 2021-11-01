@@ -28,6 +28,7 @@ const clickOption = (option) => {
         if (player.currentLevel <= 15) {
             sendAskAlert("Bạn đã trả lời đúng , có muốn tiếp tục không ?", "Chúc mừng", "warning", function () {
                 startCountDown();
+                loadQuestion(player.getCurrentQuestion());
             });
 
 

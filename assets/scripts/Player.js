@@ -10,6 +10,7 @@ class Player {
         this.isReply = false;
         this.isLose = false;
         this.lastBonus = 0;
+        this.lastIsWin = false;
     }
 
     addQuestion(question) {
@@ -39,9 +40,11 @@ class Player {
         let result = false;
         if (this.getCurrentQuestion().checkAnswer(option)) {
             this.upLevel();
+            this.lastIsWin = true;
             result = true;
         } else {
             result = false;
+            this.lastIsWin = false;
             this.isLose = true;
         }
 
@@ -66,8 +69,8 @@ class Player {
         this.currentLevel++;
         this.setState();
         this.rewardList.renderRewardList();
-        if (this.currentLevel <= 15)
-            loadQuestion(this.getCurrentQuestion());
+        //  if (this.currentLevel <= 15)
+        //  loadQuestion(this.getCurrentQuestion());
     }
 
     setState() {

@@ -211,117 +211,63 @@ var questionAllList = [
                 ],
                 "correct": 3
             }, {
-                "question": "Câu hỏi mức độ 4.3",
+                "question": "Đất nước nào được mệnh danh là 'Đất nước Triệu Voi'?",
                 "content": [
-                    "ans 1",
-                    "ans 2",
-                    "ans 3",
-                    "ans 4"
-                ],
-                "correct": 3
-            }, {
-                "question": "Câu hỏi mức độ 4.4",
-                "content": [
-                    "ans 1",
-                    "ans 2",
-                    "ans 3",
-                    "ans 4"
-                ],
-                "correct": 2
-            }, {
-                "question": "Câu hỏi mức độ 4.5",
-                "content": [
-                    "ans 1",
-                    "ans 2",
-                    "ans 3",
-                    "ans 4"
-                ],
-                "correct": 1
-            }, {
-                "question": "Câu hỏi mức độ 4.6",
-                "content": [
-                    "ans 1",
-                    "ans 2",
-                    "ans 3",
-                    "ans 4"
+                    "Lào",
+                    "Thái Lan",
+                    "Campuchia",
+                    "Malaysia"
                 ],
                 "correct": 0
             }, {
-                "question": "Câu hỏi mức độ 4.7",
+                "question": "Lương Thế Vinh thường được nhân gian gọi là trạng gì?",
                 "content": [
-                    "ans 1",
-                    "ans 2",
-                    "ans 3",
-                    "ans 4"
+                    "Trạng Quỳnh",
+                    "Trạng Trình",
+                    "Trạng Lường",
+                    "Trạng Lợn"
                 ],
                 "correct": 2
+            }, {
+                "question": "Trong thần thoại Hy Lạp, người anh hùng nào đã lấy cắp lửa của thân linh cho loài người?",
+                "content": [
+                    "Akhil",
+                    "Hecculơ",
+                    "Thêxê",
+                    "Prômêtê"
+                ],
+                "correct": 3
             }
         ]
     },
     {
         "questions": [
             {
-                "question": "Câu hỏi mức độ 5.1",
+                "question": "Nhạc sĩ nào có tác phẩm được dịch ra tiếng nước ngoài nhiều nhất?",
                 "content": [
-                    "ans 1",
-                    "ans 2",
-                    "ans 3",
-                    "ans 4"
+                    "Trần Tiến",
+                    "Trần Hiếu",
+                    "Trịnh Công Sơn",
+                    "Duy Mạnh"
                 ],
-                "correct": 0
+                "correct": 3
             },
             {
-                "question": "Câu hỏi mức độ 5.2",
+                "question": "Quốc gia nào ở Châu Phi có tỉ lệ người da trắng xấp xỉ tỉ lệ người da đen?",
                 "content": [
-                    "ans 1",
-                    "ans 2",
-                    "ans 3",
-                    "ans 4"
-                ],
-                "correct": 2
-            }, {
-                "question": "Câu hỏi mức độ 5.3",
-                "content": [
-                    "ans 1",
-                    "ans 2",
-                    "ans 3",
-                    "ans 4"
+                    "Ai Cập",
+                    "Ma Rốc",
+                    "Nam Phi",
+                    "Madagascar"
                 ],
                 "correct": 3
             }, {
-                "question": "Câu hỏi mức độ 5.4",
+                "question": "Phần 1 và 2 của bộ phim Harry Potter do ai đạo diễn?",
                 "content": [
-                    "ans 1",
-                    "ans 2",
-                    "ans 3",
-                    "ans 4"
-                ],
-                "correct": 2
-            }, {
-                "question": "Câu hỏi mức độ 5.5",
-                "content": [
-                    "ans 1",
-                    "ans 2",
-                    "ans 3",
-                    "ans 4"
-                ],
-                "correct": 1
-            }, {
-                "question": "Câu hỏi mức độ 5.6",
-                "content": [
-                    "ans 1",
-                    "ans 2",
-                    "ans 3",
-                    "ans 4"
-                ],
-                "correct": 0
-            }, {
-                "question": "Câu hỏi mức độ 5.7",
-                "content": [
-                    "ans 1",
-                    "ans 2",
-                    "ans 3",
-                    "ans 4"
+                    "Christina Anguilera",
+                    "James Cameron",
+                    "Scorpions",
+                    "Madagascar"
                 ],
                 "correct": 2
             }
