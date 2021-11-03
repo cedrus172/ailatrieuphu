@@ -2,6 +2,7 @@
 const START_TIME = 30;
 const END_TIME = 0;
 var currentTime = START_TIME;
+var listOptions = document.querySelectorAll('.option');
 var rewardEle = $('#rewardList');
 var questionTitle = $('#questionTitle');
 var countDownTime = $('.countDownTime');
@@ -11,7 +12,6 @@ var optionB = $('#optionB');
 var optionC = $('#optionC');
 var optionD = $('#optionD');
 var countDown;
-
 var rewardList = new RewardList();
 var player = new Player(rewardList);
 player.createListQuestion();
@@ -76,7 +76,6 @@ const startCountDown = () => {
         else if (currentTime <= 20)
             color = "#e4cb06";
 
-        console.log(color, currentTime);
         countDownTime.css('color', color);
         countDownTime.html(showTime);
     }, 1000);
@@ -86,6 +85,7 @@ const clearCountDown = () => {
 }
 
 const loadQuestion = (question) => {
+    showAllOptions();
     setBonusInfo();
     let content = question.content;
     questionTitle.html(`${question.question}`);
@@ -101,6 +101,34 @@ const loadQuestion = (question) => {
 const setBonusInfo = () => {
     bonusInfo.html(`TIỀN THƯỞNG : ${numberFormat(player.bonus)}`);
 }
+
+var listSupportBtn = document.querySelectorAll('.icon-support');
+listSupportBtn.forEach((support) => {
+    support.addEventListener('click', event => {
+        let nameSp = support.dataset.support;
+        player.support.useSupport(nameSp);
+        support.classList.add('used');
+        event.preventDefault();
+    });
+})
+
+var resetAllSupportBtn = () => {
+    listSupportBtn.forEach((support) => {
+        support.classList.remove('used');
+    })
+}
+
+
+const hideAOption = (number) => {
+    listOptions[number].style.display = 'none';
+}
+
+const showAllOptions = () => {
+    listOptions.forEach((option) => {
+        option.style.display = "block";
+    })
+}
+
 
 loadQuestion(player.getCurrentQuestion());
 startCountDown();

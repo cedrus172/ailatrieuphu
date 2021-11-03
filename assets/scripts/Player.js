@@ -11,6 +11,8 @@ class Player {
         this.isLose = false;
         this.lastBonus = 0;
         this.lastIsWin = false;
+        this.support = new Support(this);
+
     }
 
     addQuestion(question) {
@@ -113,6 +115,8 @@ class Player {
         this.rewardList.init();
         this.rewardList.renderRewardList();
         this.listQuestions = [];
+        resetAllSupportBtn();
+        this.support = new Support(this);
         this.createListQuestion();
         loadQuestion(this.getCurrentQuestion());
         startCountDown();
@@ -127,8 +131,6 @@ class Player {
             i++;
             question = new Question(listQuestions[i].question, listQuestions[i].content, listQuestions[i].correct);
         }
-
-
     }
 
 }

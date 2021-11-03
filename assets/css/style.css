@@ -157,3 +157,16 @@ p, .upLevel {
 #canvas{
     background-color: rgb(255, 187, 0);
 }
+
+.icon-support{
+    width: 25%;
+    cursor: pointer;
+}
+
+.icon-support:hover{
+    border: 2px solid orange;
+}
+
+.used{
+    filter: grayscale(100%);    
+}
