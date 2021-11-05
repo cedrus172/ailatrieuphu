@@ -1,0 +1,129 @@
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="myChart"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="myChartLabel">Ý kiến khán giả</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <div id="chart-container">
+          <canvas id="pieChart"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-9">
+      <div class="col-lg-4" style="margin-top: 2%">
+        <h1 class="bonusInfo">TIỀN THƯỞNG : 0 đ</h1>
+        <h1>
+          <button
+            type="button"
+            class="btn btn-lg btn-danger"
+            onClick="stopGame();"
+          >
+            <i class="bi bi-stop-circle"></i> DỪNG CUỘC CHƠI
+          </button>
+        </h1>
+      </div>
+      <div class="row justify-content-md-center">
+        <div class="questionContent">
+          <h2 id="questionTitle"></h2>
+        </div>
+
+        <div class="optionContent">
+          <div class="row">
+            <div class="col-md-5">
+              <div
+                class="option"
+                id="optionA"
+                style="height: 42%"
+                data-option="0"
+              >
+                1
+              </div>
+              <div
+                class="option"
+                id="optionC"
+                style="height: 42%"
+                data-option="2"
+              >
+                3
+              </div>
+            </div>
+            <div class="col-md-2">
+              <h1 class="countDownTime">30</h1>
+            </div>
+            <div class="col-md-5">
+              <div
+                class="option"
+                id="optionB"
+                style="height: 42%"
+                data-option="1"
+              >
+                2
+              </div>
+              <div
+                class="option"
+                id="optionD"
+                style="height: 42%"
+                data-option="3"
+              >
+                4
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-3" style="height: 100vh">
+      <div
+        class="row"
+        style="margin-bottom: 3%; align-items: center; justify-content: center"
+      >
+        <img
+          class="icon-support"
+          data-support="sp50x50"
+          src="./assets/images/icon-support/50-50.png"
+          alt="50-50"
+        />
+        <img
+          class="icon-support"
+          data-support="callFriend"
+          src="./assets/images/icon-support/goi-dien-thoai.png"
+          alt="Gọi điện thoại cho người thân"
+        />
+        <img
+          class="icon-support"
+          data-support="askLookers"
+          src="./assets/images/icon-support/hoi-y-kien-khan-gia.png"
+          alt="Hỏi ý kiến khán giá"
+        />
+      </div>
+      <div class="row">
+        <ul class="list-group" id="rewardList"></ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="./scripts/Models/Support.js"></script>
+  <script src="./scripts/Models/Question.js"></script>
+  <script src="./scripts/Models/Player.js"></script>
+  <script src="./scripts/Models/RewardList.js"></script>
+  <script src="./scripts/Main.js"></script>
+  <script src="./scripts/myChart.js"></script>
+</div>
